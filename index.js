@@ -30,11 +30,25 @@ function deleteFromEmployeeByKey(obj, key) {
     return newObj;
 };
 
+let newEmployee = deleteFromEmployeeByKey(employee, 'name');
+console.log(newEmployee)
+
 // Delete employee by key destructively
 
-function destructivelyDeleteFromEmployeeByKey(obj, key) {
+/*function destructivelyDeleteFromEmployeeByKey(obj, key) {
     delete obj[key];
     return obj;
 };
+*/
 
+/* function destructivelyDeleteFromEmployeeByKey(employee, Key) {
+    const newObject = Object.assign(employee, Key)
+    delete newObject[Key];
+    return newObject;
+}
 // I guess?
+*/
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    delete employee[key];
+    return employee;
+  };
